@@ -1,0 +1,185 @@
+body {
+    background-color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer"
+    ;
+    height: 100vh;
+}
+
+header {
+    background-color: aqua;
+    color: black;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 2rem; 
+}
+
+header ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 1.5rem; 
+}
+
+
+header a {
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: darkblue;
+    color: white;
+}
+
+/*aside*/
+aside {
+    border: .5rem solid blue; 
+    text-align: center;
+}
+
+aside h2 {
+    padding-top: 1.5rem; 
+    padding-bottom: 0.5rem;
+}
+
+aside ul {
+    padding: 0; 
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+aside p {
+    border: .2rem solid rgb(175, 170, 125); 
+    padding-top: 0.75rem; 
+    line-height: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+aside img {
+    border-radius: 50%;
+    height: 13rem;
+    margin: 0 1.75rem; 
+    margin-top: 1rem; 
+    margin-bottom: 0.5rem;
+}
+
+aside li:nth-child(odd) {
+    background-color: rgb(212, 206, 151);
+}
+
+
+.fotos {
+    padding: 0;
+    margin: 0;
+}
+
+.fotos li {  /* heel de lijst */
+    width: fit-content;
+}
+
+
+.foto { /*¨class foto in lijst */
+    padding-left: 5rem; 
+    position: relative;
+    border: .1rem solid red;
+}
+
+.foto img {
+    height: 20rem;
+    border-radius: 2rem;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem; 
+    right: 1rem;
+
+    background-color: lightblue;
+    color: black; 
+    border-radius: 0.75rem;
+    padding: 0.75rem; 
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.foto:hover .badge {
+        opacity: 1;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+main h1 {
+    display: flex;
+    border: .1rem solid red; 
+    align-items: center;
+    justify-content: center;
+    padding: 2rem; 
+}
+
+main li {
+    list-style: none;
+}
+
+
+
+
+
+
+footer {
+    background-color: rgb(97, 28, 26);
+    padding: 0.75rem; 
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 1070px) {
+    .foto { /*¨class foto in lijst */
+    padding-left: 3rem; 
+    position: relative;
+    display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+main {grid-area: main;}
+aside {grid-area: aside;}
+header {grid-area: header;}
+footer {grid-area: footer;}
+
+
+
+
+
