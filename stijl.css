@@ -30,6 +30,13 @@ header a {
     color: black; 
 }
 
+nav a:focus, nav a:hover {
+    background-color: darkblue;
+    border-radius: 1rem;
+    padding: 0.75rem; 
+    color: white;
+}
+
 aside {
     text-align: center;
 }
@@ -97,6 +104,14 @@ main ul {
     position: absolute; 
     right: 2rem;
     top: 2rem; 
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.foto:hover .badge {
+        opacity: 1;
 }
 
 footer {

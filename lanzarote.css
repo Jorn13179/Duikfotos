@@ -111,7 +111,7 @@ footer p {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         grid-template-rows: auto;
-        max-width: 80rem;
+        max-width: 100rem;
     }
 
     .foto:nth-child(4) {
