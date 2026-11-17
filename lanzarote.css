@@ -7,34 +7,43 @@ Body {
 }
 
 header {
-    background-color: blue;
-    color: black;
+    background-image: url("foto's/panoramafoto.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0; 
+    padding-left: 0;
+    padding: 1rem;
+    margin: 0;
 }
 
 nav li {
-   padding-left: 1.3rem;  
+    list-style: none;
+    padding: 1rem;
+    padding-left: 0.5rem; 
 }
 
-header a {
+header nav a {
     text-decoration: none;
-    color: black;
+    color: white;
+    background-color: #457eac;
+    border-radius: 1rem;
+    padding: 0.75rem;
 }
 
 
 .logo {
     padding: 1rem; 
-    color: black;
-    font-size: 2rem;
+    color: orange;
+    font-size: 3rem;
     font-weight: bold;
+    font-family: "Shantell Sans", cursive;
 }
 
 main h1 {
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .fotos {
@@ -74,6 +83,7 @@ footer {
 footer p {
     text-align: center;
     padding: 1rem; 
+    color: lavender;
 }
 
 @media (min-width: 1200px) {
@@ -81,10 +91,12 @@ footer p {
     header {
         display: flex;
         margin: 0; 
-        background-color: aqua;
+        background-color: rgb(72, 224, 224);
         color: black;
         align-items: center;
         justify-content: space-between;
+        height: 5rem;
+        background-size: contain;
     }
 
     .logo {
@@ -92,15 +104,24 @@ footer p {
         line-height: 1;
     }
 
+    nav ul {
+        padding: 1rem;
+    }
+
     nav li {
-        padding: 1rem 2rem; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 0.75rem;
     }
 
     nav a:hover, nav a:focus {
         background-color: darkblue;
         color: white; 
         padding: 0.75rem; 
-        border-radius: 1rem;
+        border-radius: 0.75rem;
     }
 
     main h1 {
@@ -112,6 +133,13 @@ footer p {
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         grid-template-rows: auto;
         max-width: 100rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .foto img {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .foto:nth-child(4) {

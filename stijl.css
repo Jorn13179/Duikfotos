@@ -1,41 +1,53 @@
+:root {
+    --color-header: antiquewhite; 
+}
 
 body {
-    background-color: antiquewhite;
+    background-color: var(--color-header);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
 
 header {
-    background-color: aqua;
-    color: black;
+    background-image: url("foto's/panoramafoto.jpg");
+    background-size: cover; 
+    background-position: center;
 }
 
 .logo {
     font-weight: bold;
-    font-size: 2rem; 
-    padding: 0.5rem; 
+    font-size: 3rem; 
+    padding: 1rem; 
+    font-family: "Shantell Sans", cursive;
+    color:orange;
 }
 
 nav li {
     list-style: none;
-    padding:  0.5rem;  
+    padding: 1rem;
+    padding-left: 0.5rem;
 }
 
 nav ul {
     padding-left: 0;
+    padding: 1rem;
+    margin: 0;
 }
 
-header a {
+header nav a {
     text-decoration: none;
-    color: black; 
+    color: white; 
+    background-color: #457eac;
+    border-radius: 1rem;
+    padding: 0.75rem;
 }
 
-nav a:focus, nav a:hover {
+/*nav a:focus, nav a:hover {
     background-color: darkblue;
     border-radius: 1rem;
     padding: 0.75rem; 
     color: white;
-}
+}*/
 
 aside {
     text-align: center;
@@ -54,6 +66,7 @@ aside ul {
 aside h2 {
     background-color: rgb(212, 206, 151);
     padding: 0.75rem; 
+    font-family: "Shantell Sans", cursive;
 }
 
 aside li:nth-child(odd) {
@@ -75,12 +88,15 @@ aside img {
 
 main h1 {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+main p {
+    padding: 1rem;
+    text-align: center;
+}
 
 main img {
-    margin-left: auto;
-    margin-right: auto;
     height: 23rem;
     border-radius: 2rem;
     display: block; 
@@ -90,14 +106,15 @@ main img {
 main ul {
     display: flex; 
     padding: 0;
-    justify-content: center;
+    margin: 0;
 }
 
  main .foto {
     position: relative; 
     list-style: none;
     display: inline-block;
-      
+    margin-left: auto;
+    margin-right: auto;  
 }
 
 .badge {
@@ -106,7 +123,7 @@ main ul {
     top: 2rem; 
 
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     pointer-events: none;
 }
 
@@ -121,9 +138,10 @@ footer {
 
 footer p {
     text-align: center;
+    color: lavender;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     body {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -137,12 +155,13 @@ footer p {
         display: flex;
         justify-content: space-between;
         height: 5rem;
+        background-size: contain;
     }
 
     nav ul {
         margin: 0; 
         display: flex;
-        padding: 1.5rem; 
+        padding: 1rem; 
     }
 
     nav li {
@@ -154,8 +173,14 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2rem; 
     } 
+
+    nav a:focus, nav a:hover {
+        background-color: darkblue;
+        border-radius: 1rem;
+        padding: 0.75rem; 
+        color: white;
+    }
 
     aside {
         width: 20rem;
